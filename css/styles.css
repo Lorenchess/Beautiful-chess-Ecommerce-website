@@ -56,16 +56,19 @@ body {
     font-size: 25px;
     color: #343a40 !important;
     padding: 10px;
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.03);
 }
 
 .navbar-brand {
     font-size: 40px;
+    font-weight: 600;
+    color: var(--cl-primary-dark)!important;
 }
 
 .nav-link {
-    margin-left: 10px !important;
+    margin-left: 15px !important;
     color: #343a40 !important;
-    font-weight: 500;
+    font-weight: 600;
     border-bottom: 0.2rem solid transparent;
     border-top: 0.3rem solid transparent;
 }
@@ -79,11 +82,28 @@ body {
   border-bottom: 0.2rem solid var(--cl-primary-dark);
   border-top: 0.2rem solid var(--cl-primary-dark);
 }
+.nav-pills 
+.nav-link.active, 
+.nav-pills 
+.show>.nav-link {
+background-color: #f3bb80;
+border: 0.2rem solid var(--cl-primary-dark);
+}
+
+.shopping-cart {
+    color: #452400; 
+    text-decoration: none;
+    margin-left: 20px;
+    align-self: center;
+    transition: all .2s ease-in-out;
+}
+
+.shopping-cart:hover {
+  transform: scale(1.1);
+}
+
 
 /***HERO SECTION***/
-/* main {
-    height: 80vh !important;
-} */
 
 .section-hero {
     display: flex;
@@ -125,7 +145,7 @@ body {
     font-weight: 900;
     text-decoration: none;
     color: var(--cl-primary-dark);
-    margin-top: 10px;
+    margin-top: 20px;
     align-content: center;
 }
 
@@ -208,6 +228,7 @@ body {
     background-color:#a15300;
     border: 2px solid #5c3000;
     margin-top: 5px;
+    transition: all .2s ease-in-out;
 }
 
 .featured-btn:hover, 
@@ -215,6 +236,7 @@ body {
     background-color: #f3bb80;
     color: #452400;
     border: 2px solid #452400;
+    transform: scale(1.1);
 }
 
 .btn-all-products {
@@ -232,7 +254,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    /* transition: all 2s ease-in-out; */
     /* box-shadow: 0 9px #999; */
 }
 
@@ -240,12 +262,10 @@ body {
 .btn-all-products:visited {
     color: #fff;
     background-color:#a15300;
-    transform: scale(.8);
 }
 
 .btn-all-products:hover, 
 .btn-all-products:active {
- 
  color: #fff;   
  animation: rainbow 3s ease-in-out infinite;
 }
@@ -256,14 +276,13 @@ body {
     background-color: #f08c00;
   }
   20%{
-    background-color: #e67700;
+    background-color: #e67700; 
   }
   40%{
     background-color: #a15300;
   }
   60%{
     background-color: #5c3000;
-   
   }
   80%{
     background-color: #a15300;
