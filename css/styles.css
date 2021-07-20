@@ -145,19 +145,25 @@ border: 0.2rem solid var(--cl-primary-dark);
     font-weight: 900;
     text-decoration: none;
     color: var(--cl-primary-dark);
-    margin-top: 20px;
+    margin-top: 25px;
     align-content: center;
+}
+
+.hero-cta a {
+   color: #733c00 !important;
 }
 
 .hero-cta a::after {
     content:"";
+    border-bottom: .1em solid #733c00;
+    border-radius: .5rem;
     position: absolute;
-    bottom: 0;
-    top: 5rem;
+    bottom: .14em;
+    top: 0;
     left:0;
-    right: 0;
-    background:#f3bb80;
+    right: 100%;
     z-index: -1;
+    transition: right .4s cubic-bezier(0,.5,0,1);
 }
 
 .hero-cta:link,
@@ -165,12 +171,16 @@ border: 0.2rem solid var(--cl-primary-dark);
   color: var(--cl-primary-dark);
 }
 
-.hero-cta a:hover, 
+.hero-cta a:hover::after {
+  right: 0;
+}
+
+/* .hero-cta a:hover, 
 .hero-cta a:active {
    background:#f3bb80;
    font-size: 5.5rem;
    transition: all .3s ease-in-out;
-}
+} */
 
 
 
@@ -199,7 +209,22 @@ border: 0.2rem solid var(--cl-primary-dark);
     border: 1.5px solid  var(--cl-primary-dark);
     color: var(--cl-primary-dark);
     font-weight: 500;
-     box-shadow: 0 2.4rem 4.8rem rgba(252, 252, 252, 0.15);
+    box-shadow: 0 2.4rem 4.8rem rgba(252, 252, 252, 0.15);
+    transition: all .4s ease-in-out;
+}
+
+.card-1:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+.card-2:hover {
+  transform: scale(1.2);
+  margin-top: 5px;
+  z-index: 10;
+}
+.card-3:hover {
+  transform: scale(1.2);
+  z-index: 10;
 }
 
 
@@ -254,6 +279,7 @@ border: 0.2rem solid var(--cl-primary-dark);
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
+    /* z-index: 100; */
     /* transition: all 2s ease-in-out; */
     /* box-shadow: 0 9px #999; */
 }
