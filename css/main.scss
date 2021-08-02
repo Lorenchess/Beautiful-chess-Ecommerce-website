@@ -59,10 +59,11 @@ body {
 
 .navbar {
     background-color:$bc-color!important;
-    font-size: 25px;
-    color: #343a40 !important;
+    font-size: 22px;
+    color: $primary-color-dark !important;
     padding: 10px;
     box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.03);
+    text-align: center;
 }
 
 .navbar-brand {
@@ -73,10 +74,11 @@ body {
 
 .nav-link {
     margin-left: 15px !important;
-    color: #343a40 !important;
+    color: $primary-color-dark !important;
     font-weight: 600;
     border-bottom: 0.2rem solid transparent;
-    border-top: 0.3rem solid transparent;
+    border-top: 0.2rem solid transparent;
+     text-align: center;
 }
 
 .navbar-nav li a.active,
@@ -177,25 +179,24 @@ border: 0.2rem solid $primary-color-dark;
 }
 
 
-/***FEACTURED SECTION***/
+/***FEATURED SECTION***/
 
 .section-featured {
     background-color:$bc-color;
     height: 70vh;
     /* margin-top: 40px; */
+    & h1 {
+    color: $primary-color-dark;
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 40px; 
+    }
 }
 .featured-container {
     padding-top: 1px;
 }
 
-
-.section-featured h1 {
-    color: $primary-color-dark;
-    font-size: 3.5rem;
-    font-weight: 900;
-    text-align: center;
-    margin: 40px;
-}
 
 .card {
     padding:10px ;
@@ -250,15 +251,15 @@ border: 0.2rem solid $primary-color-dark;
     border: 2px solid #5c3000;
     margin-top: 5px;
     transition: all .2s ease-in-out;
-}
 
-.featured-btn:hover, 
-.featured-btn:active {
+    &:hover,&:active {
     background-color: $bc-color;
     color: $primary-color-dark;
     border: 2px solid $primary-color-dark;
     transform: scale(1.1);
+    }
 }
+
 
 .btn-all-products {
     font-size: 20px;
@@ -315,23 +316,56 @@ border: 0.2rem solid $primary-color-dark;
   
 }
 
-.our-partners h3 {
+.partners-heading {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: 1.5rem;
   font-size: 2.5rem;
+  font-weight: 600;
+  color: $primary-color-dark;
+  align-items: center;
+
+    &::before,
+    &::after {
+        content: "";
+        height: 1px;
+        display: block;
+        background-color: $primary-color-dark;
+    }
 }
 
-/* .our-partners h3::before {
-  content: "-------------------";
-} */
+
+.partners-wrapper {
+    margin-right: 100px;
+    margin-bottom: 20px;
+    
+}
 
 .partners {
-    width: 100%;
-    height: 12rem;
-    margin: 5px;
+    margin: 20px;
+    max-width: auto;
+    align-self: center;
+    justify-self: center;
+
+    &-1 {
+    height: 11rem;
+    margin: 0;
+    
+    }
+    &-2 {
+    height: 7.5rem;
+    
+    }
+    &-3 {
+    height: 9rem;
+    
+    }
+    &-4 {
+    height: 7.2rem;
+    margin-right: 100px;
+    }
 }
 
-.partners-1 {
- height: 16rem;
- width: 20rem;
-}
+
 
 
