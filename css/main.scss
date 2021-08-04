@@ -440,7 +440,7 @@ body {
 .contact-wrapper {
   position: relative;
   width: 100%;
-  min-height: 60vh;
+  min-height: 70vh;
   padding: 2rem;
   background-color: #fafafa;
   overflow: hidden;
@@ -656,13 +656,13 @@ textarea.input {
   margin-top: 0.5rem;
 
   & .fab {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
   }
 
   & a {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     border-radius: 5px;
     border: 1px solid $primary-color-dark;
     background: radial-gradient(circle, rgba(115,60,0,1) 0%, rgba(243,187,128,1) 100%);
@@ -769,11 +769,77 @@ textarea.input {
 ///************FOOTER **********///
 
 .footer-wrapper {
-  height: 20vh;
+  height: 13rem;
    background-color: $bc-color !important;
   font-size: 22px;
   color: $primary-color-dark !important;
   padding: 10px;
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.03);
+ align-content: center;
+ 
   
 }
+
+.footer-w-king {
+  font-size: 12rem;
+  color: #fdf1e6;
+  margin-right: 1rem;
+}
+
+.footer-w-queen {
+  font-size: 10rem;
+  color: #fdf1e6;
+  margin-right: 1rem;
+}
+
+.footer-w-rook {
+  font-size: 8rem;
+  color: #fdf1e6;
+  margin-right: 1rem;
+}
+
+.footer-w-bishop {
+  font-size: 6.5rem;
+  color: #fdf1e6;
+  margin-right: 1rem;
+}
+
+.footer-w-knight {
+  font-size: 5rem;
+  color: #fdf1e6;
+  margin-right: 1rem;
+}
+
+.footer-w-pawn {
+   font-size: 4.5rem;
+   color: #fdf1e6;
+}
+.footer-b-king {
+  font-size: 12rem;
+  margin-left: 1rem;
+}
+
+.footer-b-queen {
+  font-size: 10rem;
+  margin-left: 1rem;
+}
+
+.footer-b-rook {
+  font-size: 8rem;
+  margin-left: 1rem;
+}
+
+.footer-b-bishop {
+  font-size: 6.5rem;
+  margin-left: 1rem;
+}
+
+.footer-b-knight {
+  font-size: 5rem;
+  margin-left: 1rem;
+}
+
+.footer-b-pawn {
+   font-size: 4.5rem;
+}
+
