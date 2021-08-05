@@ -656,26 +656,25 @@ textarea.input {
   margin-top: 0.5rem;
 
   & .fab {
-    font-size: 2rem;
+    font-size: 4rem;
     text-align: center;
   }
 
   & a {
-    width: 45px;
-    height: 45px;
-    border-radius: 5px;
-    border: 1px solid $primary-color-dark;
-    background: radial-gradient(circle, rgba(115,60,0,1) 0%, rgba(243,187,128,1) 100%);
-    color: #fff;
+    // width: 35px;
+    // height: 35px;
+    // border-radius: 5px;
+    // border: 1px solid $primary-color-dark;
+    // background: radial-gradient(circle, rgba(115,60,0,1) 0%, rgba(243,187,128,1) 100%);
+    color: $primary-color-dark;
     text-align: center;
-    line-height: 35px;
-    margin-right: 1rem;
+    // line-height: 35px;
+    margin-right: 1.5rem;
     transition: all 0.3s;
   }
 
   & a:hover {
    transform: scale(1.05);
-   border: 1.2px solid $primary-color-dark;
   }
 }
 
@@ -777,6 +776,10 @@ textarea.input {
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.03);
  align-content: center;
  
+ & .footer-heading p {
+   font-weight: 600;
+   --animate-duration:1.5s;
+ }
   
 }
 

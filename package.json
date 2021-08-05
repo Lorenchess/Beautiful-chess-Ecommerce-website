@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.0.2"
   },
   "name": "chess-ecommerce-site",

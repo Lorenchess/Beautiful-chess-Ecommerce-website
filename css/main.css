@@ -541,22 +541,15 @@ textarea.input {
   display: flex;
   margin-top: 0.5rem; }
   .social-icons .fab {
-    font-size: 2rem;
+    font-size: 4rem;
     text-align: center; }
   .social-icons a {
-    width: 45px;
-    height: 45px;
-    border-radius: 5px;
-    border: 1px solid #452400;
-    background: radial-gradient(circle, #733c00 0%, #f3bb80 100%);
-    color: #fff;
+    color: #452400;
     text-align: center;
-    line-height: 35px;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     transition: all 0.3s; }
   .social-icons a:hover {
-    transform: scale(1.05);
-    border: 1.2px solid #452400; }
+    transform: scale(1.05); }
 
 @media (max-width: 850px) {
   .form {
@@ -618,6 +611,9 @@ textarea.input {
   padding: 10px;
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.03);
   align-content: center; }
+  .footer-wrapper .footer-heading p {
+    font-weight: 600;
+    --animate-duration:1.5s; }
 
 .footer-w-king {
   font-size: 12rem;
