@@ -46,9 +46,11 @@ html {
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
   box-sizing: border-box;
+  height: 100%;
 }
 
 body {
+  min-height: 100vh;
   font-family: "Lora", serif;
   line-height: 1.5;
   font-weight: 400;
@@ -447,7 +449,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
- background: radial-gradient(circle, #f9ddc0 0%, rgba(243, 187, 128, 1) 100%);
+  background: radial-gradient(circle, #f9ddc0 0%, rgba(243, 187, 128, 1) 100%);
 }
 
 .form {
@@ -468,7 +470,6 @@ body {
   position: relative;
 }
 
-
 .contact-form:before {
   content: "";
   position: absolute;
@@ -485,15 +486,14 @@ form {
   z-index: 10;
   overflow: hidden;
   position: relative;
-  // margin-top: 10px;
-}
 
-.title {
-  color: #fff;
-  font-weight: 500;
-  font-size: 2.5rem;
-  line-height: 1;
-  margin-bottom: 0.7rem;
+  & .title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+  }
 }
 
 .input-container {
@@ -554,13 +554,12 @@ textarea.input {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  
+
   &:hover {
-  background-color: transparent;
-  color: #fff;
+    background-color: transparent;
+    color: #fff;
   }
 }
-
 
 .input-container span {
   position: absolute;
@@ -582,7 +581,7 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background-color: #1abc9c;
+  background-color: $primary-color-dark;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -611,18 +610,18 @@ textarea.input {
 .contact-info {
   padding: 2.3rem 2.2rem;
   position: relative;
-}
 
-.contact-info .title {
-  color: $primary-color-dark;
-  font-weight: 900;
-}
+  & .title {
+    color: $primary-color-dark;
+    font-weight: 900;
+  }
 
-.text {
-  color: $primary-color-dark;
-  margin: 1.5rem 0 2rem 0;
-  font-size: 1.5rem;
-  font-weight: 500;
+  & .text {
+    color: $primary-color-dark;
+    margin: 1.5rem 0 2rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
 }
 
 .information {
@@ -632,10 +631,10 @@ textarea.input {
   align-content: center;
   text-align: center;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.icon {
+.info-icon {
   width: 28px;
   font-size: 2.2rem;
   margin-right: 1rem;
@@ -661,23 +660,16 @@ textarea.input {
   }
 
   & a {
-    // width: 35px;
-    // height: 35px;
-    // border-radius: 5px;
-    // border: 1px solid $primary-color-dark;
-    // background: radial-gradient(circle, rgba(115,60,0,1) 0%, rgba(243,187,128,1) 100%);
     color: $primary-color-dark;
     text-align: center;
-    // line-height: 35px;
     margin-right: 1.5rem;
     transition: all 0.3s;
   }
 
   & a:hover {
-   transform: scale(1.05);
+    transform: scale(1.05);
   }
 }
-
 
 @media (max-width: 850px) {
   .form {
@@ -695,17 +687,6 @@ textarea.input {
     top: -13px;
     left: initial;
     right: 70px;
-  }
-
-  .square {
-    transform: translate(140%, 43%);
-    height: 350px;
-  }
-
-  .big-circle {
-    bottom: 75%;
-    transform: scale(0.9) translate(-40%, 30%);
-    right: 50%;
   }
 
   .text {
@@ -726,11 +707,6 @@ textarea.input {
     display: none;
   }
 
-  .square,
-  .big-circle {
-    display: none;
-  }
-
   form,
   .contact-info {
     padding: 1.7rem 1.6rem;
@@ -746,15 +722,15 @@ textarea.input {
     font-size: 1.15rem;
   }
 
-  .social-icons a {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-  }
+  // .social-icons a {
+  //   width: 30px;
+  //   height: 30px;
+  //   line-height: 30px;
+  // }
 
-  .icon {
-    width: 23px;
-  }
+  // .icon {
+  //   width: 23px;
+  // }
 
   .input {
     padding: 0.45rem 1.2rem;
@@ -768,19 +744,20 @@ textarea.input {
 ///************FOOTER **********///
 
 .footer-wrapper {
+  position: sticky;
+  top: 100%;
   height: 13rem;
-   background-color: $bc-color !important;
-  font-size: 22px;
+  background-color: $bc-color !important;
+  font-size: 1.5rem;
   color: $primary-color-dark !important;
-  padding: 10px;
+  padding: 1rem;
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.03);
- align-content: center;
- 
- & .footer-heading p {
-   font-weight: 600;
-   --animate-duration:1.5s;
- }
-  
+  align-content: center;
+
+  & .footer-heading p {
+    font-weight: 600;
+    // --animate-duration: 1.5s;
+  }
 }
 
 .footer-w-king {
@@ -814,8 +791,8 @@ textarea.input {
 }
 
 .footer-w-pawn {
-   font-size: 4.5rem;
-   color: #fdf1e6;
+  font-size: 4.5rem;
+  color: #fdf1e6;
 }
 .footer-b-king {
   font-size: 12rem;
@@ -843,6 +820,96 @@ textarea.input {
 }
 
 .footer-b-pawn {
-   font-size: 4.5rem;
+  font-size: 4.5rem;
 }
+
+///************PRODUCTS PAGE **********///
+
+.row-heading-sorting {
+ margin-top: 10px;
+  & h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-top: 10px;
+  }
+
+  & select,
+  option {
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 1px solid $primary-color-dark;
+    margin-top: 10px;
+    padding: 0 5px;
+  }
+}
+
+.rating {
+ color: $primary-color-dark;
+  font-size: 1.5rem;
+}
+
+
+.magnifier-container {
+
+  position: relative;
+
+  & .img-magnifier-glass {
+  position: absolute;
+  border: 1px solid $bc-color;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+ &:hover {
+   .img-magnifier-glass{
+     opacity: 1;
+   }
+ }
+
+ & .card-body {
+   border: 1px solid $primary-color-dark;
+   background-color: $bc-color;
+
+   & .card-title {
+     font-size: 2rem;
+     font-weight: 600;
+   }
+   & .price {
+     font-size: 2.2rem;
+     font-weight: 600;
+     margin-top: .5rem;
+   }
+
+   & .card-text {
+     font-size: 1.8rem;
+     font-weight: 600;
+   }
+ }
+
+ & .info-btn {
+   font-size: 1.5rem;
+   font-weight: 800;
+   text-transform: uppercase;
+ }
+}
+
+// .zoomie {
+//   position: relative;
+
+//   & .card-img-top img:hover {
+//   .img-magnifier-glass{
+//      opacity: 1;
+//    }
+// }
+// }
+// .card-body:hover{
+//  & .img-magnifier-glass{
+//      width: 100px!important;
+//      height: 100px!important;
+//    }
+// }
+
 

@@ -36,9 +36,11 @@ html {
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 100%; }
 
 body {
+  min-height: 100vh;
   font-family: "Lora", serif;
   line-height: 1.5;
   font-weight: 400;
@@ -396,13 +398,12 @@ form {
   z-index: 10;
   overflow: hidden;
   position: relative; }
-
-.title {
-  color: #fff;
-  font-weight: 500;
-  font-size: 2.5rem;
-  line-height: 1;
-  margin-bottom: 0.7rem; }
+  form .title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 0.7rem; }
 
 .input-container {
   position: relative;
@@ -480,7 +481,7 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background-color: #1abc9c;
+  background-color: #452400;
   top: 50%;
   transform: translateY(-50%); }
 
@@ -504,16 +505,14 @@ textarea.input {
 .contact-info {
   padding: 2.3rem 2.2rem;
   position: relative; }
-
-.contact-info .title {
-  color: #452400;
-  font-weight: 900; }
-
-.text {
-  color: #452400;
-  margin: 1.5rem 0 2rem 0;
-  font-size: 1.5rem;
-  font-weight: 500; }
+  .contact-info .title {
+    color: #452400;
+    font-weight: 900; }
+  .contact-info .text {
+    color: #452400;
+    margin: 1.5rem 0 2rem 0;
+    font-size: 1.5rem;
+    font-weight: 700; }
 
 .information {
   display: flex;
@@ -522,9 +521,9 @@ textarea.input {
   align-content: center;
   text-align: center;
   font-size: 2rem;
-  font-weight: 600; }
+  font-weight: 700; }
 
-.icon {
+.info-icon {
   width: 28px;
   font-size: 2.2rem;
   margin-right: 1rem;
@@ -563,13 +562,6 @@ textarea.input {
     top: -13px;
     left: initial;
     right: 70px; }
-  .square {
-    transform: translate(140%, 43%);
-    height: 350px; }
-  .big-circle {
-    bottom: 75%;
-    transform: scale(0.9) translate(-40%, 30%);
-    right: 50%; }
   .text {
     margin: 1rem 0 1.5rem 0; }
   .social-media {
@@ -580,9 +572,6 @@ textarea.input {
     padding: 1.5rem; }
   .contact-info:before {
     display: none; }
-  .square,
-  .big-circle {
-    display: none; }
   form,
   .contact-info {
     padding: 1.7rem 1.6rem; }
@@ -592,28 +581,23 @@ textarea.input {
     font-size: 0.8rem; }
   .title {
     font-size: 1.15rem; }
-  .social-icons a {
-    width: 30px;
-    height: 30px;
-    line-height: 30px; }
-  .icon {
-    width: 23px; }
   .input {
     padding: 0.45rem 1.2rem; }
   .btn {
     padding: 0.45rem 1.2rem; } }
 
 .footer-wrapper {
+  position: sticky;
+  top: 100%;
   height: 13rem;
   background-color: #f3bb80 !important;
-  font-size: 22px;
+  font-size: 1.5rem;
   color: #452400 !important;
-  padding: 10px;
+  padding: 1rem;
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.03);
   align-content: center; }
   .footer-wrapper .footer-heading p {
-    font-weight: 600;
-    --animate-duration:1.5s; }
+    font-weight: 600; }
 
 .footer-w-king {
   font-size: 12rem;
@@ -666,3 +650,52 @@ textarea.input {
 
 .footer-b-pawn {
   font-size: 4.5rem; }
+
+.row-heading-sorting {
+  margin-top: 10px; }
+  .row-heading-sorting h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-top: 10px; }
+  .row-heading-sorting select,
+  .row-heading-sorting option {
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 1px solid #452400;
+    margin-top: 10px;
+    padding: 0 5px; }
+
+.rating {
+  color: #452400;
+  font-size: 1.5rem; }
+
+.magnifier-container {
+  position: relative; }
+  .magnifier-container .img-magnifier-glass {
+    position: absolute;
+    border: 1px solid #f3bb80;
+    border-radius: 50%;
+    cursor: none;
+    /*Set the size of the magnifier glass:*/
+    width: 200px;
+    height: 200px;
+    opacity: 0; }
+  .magnifier-container:hover .img-magnifier-glass {
+    opacity: 1; }
+  .magnifier-container .card-body {
+    border: 1px solid #452400;
+    background-color: #f3bb80; }
+    .magnifier-container .card-body .card-title {
+      font-size: 2rem;
+      font-weight: 600; }
+    .magnifier-container .card-body .price {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-top: .5rem; }
+    .magnifier-container .card-body .card-text {
+      font-size: 1.8rem;
+      font-weight: 600; }
+  .magnifier-container .info-btn {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase; }
